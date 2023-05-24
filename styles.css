@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans,wght@0,800;1,700&display=swap');
+
+html,
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+header {
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+    padding: 10px
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.home {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home__title {
+    position: relative;
+}
+
+
+.home__title h1 {
+    border-right: .15em solid orange;
+    font-family: 'Open Sans', sans-serif;
+    color: aliceblue;
+    font-size: 60px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 100px;
+}
+
+.home__title h1:nth-child(1) {
+    width: 4ch;
+    -webkit-animation: type 1s steps(3), blink .5s;
+    animation: type 1s steps(3), blink .5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.home__title h1:nth-child(2) {
+    width: 12ch;
+    opacity: 0;
+    -webkit-animation: type2 2s steps(12), blink .5s;
+    animation: type2 2s steps(12), blink .5s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.home__title h1:nth-child(3) {
+    width: 6.9em;
+    opacity: 0;
+    -webkit-animation: type3 2s steps(20, end), blink .5s step-end infinite alternate;
+    animation: type3 2s steps(20, end), blink .5s step-end infinite alternate;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate {
+    0% {
+        background-position: -500%;
+        opacity: 1;
+    }
+
+    100% {
+        background-position: 500%;
+        opacity: 1;
+    }
+}
+
+@keyframes type {
+    0% {
+        width: 0;
+    }
+
+    99.9% {
+        border-right: .15em solid orange;
+    }
+
+    100% {
+        border: none;
+    }
+}
+
+@-webkit-keyframes type {
+    0% {
+        width: 0;
+    }
+
+    99.9% {
+        border-right: .15em solid orange;
+    }
+
+    100% {
+        border: none;
+    }
+}
+
+@keyframes type2 {
+    0% {
+        width: 0;
+    }
+
+    1% {
+        opacity: 1;
+    }
+
+    99.9% {
+        border-right: .15em solid orange;
+    }
+
+    100% {
+        opacity: 1;
+        border: none;
+    }
+}
+
+@-webkit-keyframes type2 {
+    0% {
+        width: 0;
+    }
+
+    1% {
+        opacity: 1;
+    }
+
+    99.9% {
+        border-right: .15em solid orange;
+    }
+
+    100% {
+        opacity: 1;
+        border: none;
+    }
+}
+
+@keyframes type3 {
+    0% {
+        width: 0;
+    }
+
+    1% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes type3 {
+    0% {
+        width: 0;
+    }
+
+    1% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@-webkit-keyframes blink {
+    50% {
+        border-color: tranparent;
+    }
+}
+
+.home img {
+    height: 90vh;
+}
+
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100vh;
+}
+
+.about__me {
+    width: 50%;
+    margin-left: 100px;
+    background-color: whitesmoke;
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.about__me h1 {
+    font-size: 60px;
+    color: #73AF59;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.about__me p {
+    font-size: 17px;
+    color: black;
+    line-height: 20pt;
+
+}
+
+.container {
+    height: 80vh;
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.ball {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    padding: 10%;
+}
+
+.ball_text {
+    color: white;
+}
